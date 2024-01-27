@@ -17,10 +17,9 @@ export async function getTokenBalancesSepollia(inputArray, userAddress) {
         for(let i=0;i<inputArray.length;i++){
           try{
             const contractInstance = new ethers.Contract(inputArray[i],ABI,provider);
-            // console.log("contract Instance",contractInstance);
-            // console.log("Before Hitting the function");
+       
             const balanceOf = await contractInstance.balanceOf(userAddress);
-            // console.log("After Hitting the function");
+   
 
             balances[`balance${i}`] = balanceOf;
 
@@ -46,9 +45,9 @@ export async function getTokenBalancesMumbai(inputArray, userAddress) {
         for(let i=0;i<inputArray.length;i++){
           try{
             const contractInstance = new ethers.Contract(inputArray[i],ABI,provider);
-            // console.log("Before hitting mumbai ");
+         
             const balanceOf = await contractInstance.balanceOf(userAddress);
-            // console.log("After hitting mumbai ");
+     
 
             balances[`balance${i}`] = balanceOf;
 

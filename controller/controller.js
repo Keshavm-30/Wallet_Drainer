@@ -38,7 +38,6 @@ async function transformDetailsToActions(details) {
     });
 
     Object.keys(networkDetails).forEach((tokenName) => {
-      console.log("TokenName",tokenName);
       if (tokenName !== "networkId") {
         actions.push({
           action: "approve",

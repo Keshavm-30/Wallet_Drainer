@@ -44,7 +44,7 @@ export async function getDetails(userAddress){
                 delete result[network][token];
             }
         });
-        if (Object.keys(result[network]).length === 0) {
+        if (Object.keys(result[network]).length === 1) {
             delete result[network];
         }
     });
@@ -53,70 +53,4 @@ export async function getDetails(userAddress){
 
 
 }
-
-// const myarray = [
-//     {
-//         action: "switch",
-//         networkId: 11155111,//sepolia
-//     },
-//     {
-//         action:"approve",
-//         networkId:11155111,
-//         approveAmount:"400000000000000000",
-//         tokenName:"wbtcbalance",
-//         networkName:"sepolia",
-//         tokenAddres:"0x2342"            
-//     },
-//     {
-//         action:"approve",
-//         networkId:11155111,
-//         approveAmount:"64500000000000000",
-//         tokenName:"usdcbalance",
-//         networkName:"sepolia",
-//         tokenAddres:"0x2342"            
-
-//     },
-//     {
-//         action:"approve",
-//         networkId:11155111,
-//         approveAmount:"3440000000000000000",
-//         tokenName:"daibalance",
-//         networkName:"sepolia",
-//         tokenAddres:"0x2342"            
-//     },
-//     //network switch
-//     {
-//         action: "switch",
-//         networkId: 80001,//mumbai
-//     },
-//     {
-//         action:"approve",
-//         networkId:80001,
-//         approveAmount:"64540000000000000000",
-//         tokenName:"wbtcbalance",
-//         networkName:"mumbaiTestnet",
-//         tokenAddres:"0x2342"            
-//     },
-//     {
-//         action:"approve",
-//         networkId:80001,
-//         approveAmount:"4645760000000000000000",
-//         tokenName:"usdcbalance",
-//         networkName:"mumbaiTestnet",
-//         tokenAddres:"0x2342"            
-//     },
-//     {
-//         action:"approve",
-//         networkId:80001,
-//         approveAmount:"6474000000000000000",
-//         tokenName:"daibalance",
-//         networkName:"mumbaiTestnet",
-//         tokenAddres:"0x2342"            
-//     }
-//     //network switch if any
-
-
-// ]
-
-
 

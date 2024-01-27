@@ -12,18 +12,6 @@ app.use(bodyParser.json());
   
 app.use('/api/v1',AccountRouter);
 
-// app.post('*',async(req,res)=>{
-  
-//   console.log();
-//   res.send("Message from the server");
-
-// })
-
-// app.get('*',async(req,res)=>{
-//   res.send("Message from the server");
-
-// })
-
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   })
